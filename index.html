@@ -1,14 +1,334 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Jia Shen | Personal homepage – Mathematics, PDEs, Dispersive equations">
+    <title>Jia Shen · Personal homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            background: #fafafa;
+            color: #1a2a3a;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.05);
+            padding: 2rem 2rem 2.5rem;
+        }
+
+        /* header */
+        .name {
+            font-size: 2.3rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            color: #0a2942;
+            margin-bottom: 0.4rem;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2c6e9e;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            font-size: 0.9rem;
+            color: #3e5e7a;
+            margin: 0.75rem 0 0.5rem 0;
+            border-top: 1px solid #e9ecef;
+            padding-top: 1rem;
+        }
+
+        .contact span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .interests {
+            margin: 1rem 0 0.2rem 0;
+            font-size: 0.92rem;
+            background: #f5f7fa;
+            padding: 0.6rem 1rem;
+            border-radius: 28px;
+            color: #2c5a7a;
+        }
+
+        /* sections */
+        .section {
+            margin-top: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0f3b5c;
+            border-left: 4px solid #2c7da0;
+            padding-left: 0.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        /* entries (education, experience) */
+        .entry {
+            margin-bottom: 1.6rem;
+        }
+
+        .entry-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.2rem;
+        }
+
+        .entry-degree {
+            font-size: 1.05rem;
+            font-weight: 650;
+            color: #1a4d6b;
+        }
+
+        .entry-date {
+            font-size: 0.85rem;
+            color: #5f7f9e;
+            font-weight: normal;
+        }
+
+        .entry-institution {
+            font-weight: 500;
+            color: #2c7da0;
+            margin: 0.1rem 0 0.2rem 0;
+            font-size: 0.92rem;
+        }
+
+        .entry-advisor {
+            font-size: 0.88rem;
+            color: #4a627a;
+            margin-top: 0.2rem;
+        }
+
+        .entry-desc {
+            font-size: 0.92rem;
+            color: #2e4053;
+            margin-top: 0.4rem;
+        }
+
+        /* publication list */
+        .pub-list {
+            list-style: none;
+            margin-top: 0.25rem;
+        }
+
+        .pub-list li {
+            margin-bottom: 1rem;
+            font-size: 0.92rem;
+            line-height: 1.45;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #edf2f6;
+        }
+
+        .pub-authors {
+            font-weight: 500;
+            color: #1a4d6b;
+        }
+
+        .pub-title {
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .pub-journal {
+            color: #5f7e9c;
+            font-size: 0.9rem;
+        }
+
+        hr {
+            margin: 1.2rem 0 0.5rem;
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.78rem;
+            color: #8aa0b5;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 680px) {
+            .container {
+                padding: 1.4rem;
+            }
+            .name {
+                font-size: 1.9rem;
+            }
+            .entry-header {
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+            .contact {
+                gap: 0.8rem;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>This is the website of Jia Shen(Chinese character: 申佳)</h1>
-  <p>I am currently an assistant professor in School of Mathematical sciences, Nankai University.</p>
-  <hr>
+<div class="container">
+    <!-- Personal information -->
+    <div>
+        <div class="name">Jia Shen</div>
+        <div class="title">Assistant Professor · School of Mathematical Sciences, Nankai University</div>
+        <div class="interests">
+            <strong>Research interests:</strong> Nonlinear dispersive PDEs, harmonic analysis, and scattering theory.
+        </div>
+        <div class="contact">
+            <span>📧 shenjia@nankai.edu.cn</span>
+            <span>📍 Tianjin, China</span>
+            <span>📖 <a href="#" style="color: #2c7da0; text-decoration: none;">arXiv</a> / <a href="#" style="color: #2c7da0; text-decoration: none;">Google Scholar</a></span>
+            <span>🖇️ GitHub: <a href="#" style="color: #2c7da0; text-decoration: none;">github.com/jiashen</a></span>
+        </div>
+    </div>
 
-  <hr>
-  
+    <!-- Education -->
+    <div class="section">
+        <div class="section-title">Education</div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-degree">Ph.D. in Fundamental Mathematics</span>
+                <span class="entry-date">2014.09 – 2020.08</span>
+            </div>
+            <div class="entry-institution">Peking University, School of Mathematical Sciences</div>
+            <div class="entry-advisor">Advisor: Prof. Baoxiang Wang</div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-degree">B.S. in Mathematics and Applied Mathematics</span>
+                <span class="entry-date">2010.09 – 2014.07</span>
+            </div>
+            <div class="entry-institution">Beijing Normal University, School of Mathematical Sciences</div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-degree">Visiting Academic</span>
+                <span class="entry-date">2017.09 – 2018.09</span>
+            </div>
+            <div class="entry-institution">Monash University, School of Mathematics</div>
+            <div class="entry-advisor">Advisor: Prof. Zihua Guo</div>
+        </div>
+    </div>
+
+    <!-- Work experience -->
+    <div class="section">
+        <div class="section-title">Academic Positions</div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-degree">Postdoctoral Fellow / Lecturer</span>
+                <span class="entry-date">2020.11 – 2024.06</span>
+            </div>
+            <div class="entry-institution">Tianjin University, Center for Applied Mathematics</div>
+            <div class="entry-advisor">Advisor: Prof. Yifei Wu</div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-degree">Assitant Professor</span>
+                <span class="entry-date">2024.07 – Present</span>
+            </div>
+            <div class="entry-institution">Nankai University, School of Mathematical Sciences</div>
+        </div>
+    </div>
+
+    <!-- Publications (full list provided) -->
+    <div class="section">
+        <div class="section-title">Selected Publications</div>
+        <ul class="pub-list">
+            <li>
+                <span class="pub-authors">Jia Shen, Yanni Wang, and Haohao Zheng</span><br>
+                <span class="pub-title">“High-order asymptotic expansion for the nonlinear Klein-Gordon equation in the non-relativistic limit regime”</span><br>
+                <span class="pub-journal">arXiv:2411.13132 (2024).</span>
+            </li>
+            <li>
+                <span class="pub-authors">J. Shen and Y. Wu</span><br>
+                <span class="pub-title">“Global well-posedness for the defocusing 3D quadratic NLS in the sharp critical space”</span><br>
+                <span class="pub-journal">arXiv:2410.04337 (2024).</span>
+            </li>
+            <li>
+                <span class="pub-authors">R. Bai and J. Shen</span><br>
+                <span class="pub-title">“Wave operator for the generalized derivative nonlinear Schrödinger equation”</span><br>
+                <span class="pub-journal">arXiv:2312.14505 (2023), to appear in Indiana Univ. Math. J.</span>
+            </li>
+            <li>
+                <span class="pub-authors">J. Shen and Y. Wu</span><br>
+                <span class="pub-title">“Scattering for defocusing mass sub-critical NLS”</span><br>
+                <span class="pub-journal">arXiv:2310.14688 (2023), to appear in Mem. Amer. Math. Soc.</span>
+            </li>
+            <li>
+                <span class="pub-authors">X. Cheng, C. Guo, Z. Guo, X. Liao, and J. Shen</span><br>
+                <span class="pub-title">“Scattering of the three-dimensional cubic nonlinear Schrödinger equation with partial harmonic potentials”</span><br>
+                <span class="pub-journal">Anal. PDE, 17 (2024), no. 10, 3371–3446.</span>
+            </li>
+            <li>
+                <span class="pub-authors">J. Shen and Y. Wu</span><br>
+                <span class="pub-title">“Global well-posedness and scattering of 3D defocusing, cubic Schrödinger equation”</span><br>
+                <span class="pub-journal">Math. Res. Lett., 30 (2023), no. 6, 1931–1961.</span>
+            </li>
+            <li>
+                <span class="pub-authors">R. Bai, J. Shen, and Y. Wu</span><br>
+                <span class="pub-title">“Large global solutions for energy-critical nonlinear Schrödinger equation”</span><br>
+                <span class="pub-journal">SIAM J. Math. Anal., 2023, 55(5): 4193–4218.</span>
+            </li>
+            <li>
+                <span class="pub-authors">J. Shen, A. Soffer, and Y. Wu</span><br>
+                <span class="pub-title">“Almost sure scattering for the nonradial energy-critical NLS with arbitrary regularity in 3D and 4D cases”</span><br>
+                <span class="pub-journal">arXiv:2111.11935 (2021).</span>
+            </li>
+            <li>
+                <span class="pub-authors">J. Shen, A. Soffer, and Y. Wu</span><br>
+                <span class="pub-title">“Almost sure well-posedness and scattering of the 3D cubic nonlinear Schrödinger equation”</span><br>
+                <span class="pub-journal">Comm. Math. Phys., 397 (2023), no. 2, 547–605.</span>
+            </li>
+            <li>
+                <span class="pub-authors">Z. Guo and J. Shen</span><br>
+                <span class="pub-title">“Scattering below the ground state for the 2D non-linear Schrödinger and Klein-Gordon equations revisited”</span><br>
+                <span class="pub-journal">J. Math. Phys., 61 (2020), no. 8, 081507, 20 pp.</span>
+            </li>
+            <li>
+                <span class="pub-authors">Z. Guo and J. Shen</span><br>
+                <span class="pub-title">“Scattering for the quadratic Klein-Gordon equations”</span><br>
+                <span class="pub-journal">Nonlinear Differential Equations and Applications NoDEA, 2020, 27(31): 1–33.</span>
+            </li>
+        </ul>
+        <div style="margin-top: 0.4rem; font-size: 0.82rem; color: #5f7f9e;">
+            † Preprints & published works — full list available on arXiv / Google Scholar.
+        </div>
+    </div>
+
+    <hr>
+    <div class="footer-note">
+        Last update: April 2026 · template for academic personal homepage
+    </div>
+</div>
 </body>
 </html>
