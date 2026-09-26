@@ -103,8 +103,9 @@ a {
 
 .site-nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 1.55rem;
+    gap: 0.4rem 1.25rem;
 }
 
 .site-nav a {
@@ -192,20 +193,13 @@ a {
     padding: 0;
     color: #f1eee4;
     font-family: var(--serif);
-    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-size: clamp(1.05rem, 1.7vw, 1.25rem);
     line-height: 1.45;
     list-style: none;
 }
 
 .research-list li + li {
     margin-top: 0.45rem;
-}
-
-.hero-index {
-    color: rgba(255, 253, 248, 0.22);
-    font-family: var(--serif);
-    font-size: 6rem;
-    line-height: 0.8;
 }
 
 .hero-content {
@@ -233,7 +227,7 @@ a {
     margin: 1.15rem 0 0;
     color: var(--ink-soft);
     font-family: var(--serif);
-    font-size: clamp(1.18rem, 2.2vw, 1.55rem);
+    font-size: clamp(1.05rem, 1.8vw, 1.3rem);
     line-height: 1.5;
 }
 
@@ -263,38 +257,41 @@ a {
 
 .page-main {
     min-height: 38rem;
-    padding: 4.4rem clamp(1.5rem, 6vw, 5.5rem) 5.5rem;
+    padding: 3.3rem clamp(1.5rem, 6vw, 5.5rem) 4rem;
 }
 
 .page-header {
     display: grid;
     grid-template-columns: 1fr;
     align-items: end;
-    padding-bottom: 2.6rem;
+    padding-bottom: 1.6rem;
     border-bottom: 1px solid var(--line);
 }
 
 .page-header h1 {
     margin-top: 0;
-    font-size: clamp(2.6rem, 4.2vw, 3.7rem);
+    font-size: clamp(1.8rem, 3vw, 2.35rem);
+    letter-spacing: -0.025em;
+    line-height: 1.2;
 }
 
 .timeline {
-    margin-top: 3.4rem;
+    margin-top: 2.25rem;
 }
 
 .content-section + .content-section {
-    margin-top: 3.6rem;
+    margin-top: 2.6rem;
 }
 
 .content-section h2 {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin: 0 0 1.3rem;
+    margin: 0 0 1rem;
     font-family: var(--serif);
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
+    line-height: 1.35;
 }
 
 .content-section h2::after {
@@ -322,7 +319,7 @@ a {
 .timeline-item h3 {
     margin: 0;
     font-family: var(--serif);
-    font-size: 1.22rem;
+    font-size: 1.12rem;
     font-weight: 600;
     line-height: 1.35;
 }
@@ -339,7 +336,7 @@ a {
 }
 
 .publication-list {
-    margin: 3.2rem 0 0;
+    margin: 1.4rem 0 0;
     padding: 0;
     list-style: none;
     counter-reset: publications;
@@ -347,9 +344,9 @@ a {
 
 .publication-item {
     display: grid;
-    grid-template-columns: 3.2rem minmax(0, 1fr);
-    gap: 1.4rem;
-    padding: 1.6rem 0;
+    grid-template-columns: 2.4rem minmax(0, 1fr);
+    gap: 0.85rem;
+    padding: 0.95rem 0;
     border-bottom: 1px solid var(--line);
     counter-increment: publications;
 }
@@ -359,21 +356,23 @@ a {
     content: counter(publications, decimal-leading-zero);
     font-family: var(--serif);
     font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .publication-title {
     margin: 0;
     font-family: var(--serif);
-    font-size: 1.18rem;
+    font-size: 1.08rem;
     font-weight: 600;
-    line-height: 1.45;
+    line-height: 1.35;
 }
 
 .publication-authors,
 .publication-venue {
-    margin: 0.36rem 0 0;
+    margin: 0.18rem 0 0;
     color: var(--ink-soft);
-    font-size: 0.92rem;
+    font-size: 0.88rem;
+    line-height: 1.4;
 }
 
 .publication-venue {
@@ -383,8 +382,46 @@ a {
 .publication-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.55rem;
-    margin-top: 0.65rem;
+    gap: 0.2rem 0.7rem;
+    margin-top: 0.3rem;
+    line-height: 1.4;
+}
+
+.teaching-list {
+    margin: 1.4rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.teaching-item {
+    display: grid;
+    grid-template-columns: 11.5rem minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.teaching-term {
+    margin: 0;
+    color: var(--accent-dark);
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.teaching-courses p {
+    margin: 0;
+    color: var(--ink-soft);
+    line-height: 1.5;
+}
+
+.teaching-courses p + p {
+    margin-top: 0.35rem;
+}
+
+.course-note {
+    color: var(--muted);
+    font-size: 0.86rem;
 }
 
 .text-link {
@@ -402,7 +439,7 @@ a {
 }
 
 .empty-state {
-    margin-top: 3.2rem;
+    margin-top: 2.25rem;
     padding: clamp(2rem, 6vw, 4.5rem);
     text-align: center;
     background: #f7f5ee;
@@ -421,7 +458,8 @@ a {
 .empty-state h2 {
     margin: 0;
     font-family: var(--serif);
-    font-size: 1.65rem;
+    font-size: 1.4rem;
+    line-height: 1.35;
 }
 
 .empty-state p {
@@ -432,6 +470,7 @@ a {
 
 .site-footer {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
@@ -440,6 +479,7 @@ a {
     background: #eeece4;
     border-top: 1px solid var(--line);
     font-size: 0.78rem;
+    overflow-wrap: anywhere;
 }
 
 .site-footer a {
@@ -468,14 +508,16 @@ a:focus-visible {
 
     .site-nav {
         width: 100%;
-        gap: 1.15rem;
-        overflow-x: auto;
-        padding: 0 0 0.35rem;
-        scrollbar-width: thin;
+        gap: 0.4rem 1.15rem;
+        padding: 0;
     }
 
     .site-nav a {
         flex: 0 0 auto;
+    }
+
+    .site-nav a:not(.language-link)::after {
+        bottom: 0.15rem;
     }
 
     .hero {
@@ -485,10 +527,6 @@ a:focus-visible {
     .hero-aside {
         min-height: 15rem;
         padding: 2.5rem 1.5rem;
-    }
-
-    .hero-index {
-        display: none;
     }
 
     .research-list {
@@ -507,13 +545,16 @@ a:focus-visible {
         padding: 3.5rem 1.5rem 4rem;
     }
 
-    .hero h1,
-    .page-header h1 {
+    .hero h1 {
         font-size: clamp(2.4rem, 11vw, 3.2rem);
     }
 
+    .page-header h1 {
+        font-size: clamp(1.7rem, 5.5vw, 2.1rem);
+    }
+
     .page-main {
-        padding-top: 3.3rem;
+        padding-top: 2.5rem;
     }
 
     .page-header {
@@ -527,8 +568,8 @@ a:focus-visible {
     }
 
     .site-footer > :last-child {
-        align-self: flex-end;
         margin-left: 0;
+        text-align: left;
     }
 }
 
@@ -540,7 +581,7 @@ a:focus-visible {
     }
 
     .site-nav {
-        gap: 1rem;
+        gap: 0.25rem 0.9rem;
     }
 
     .site-nav a {
@@ -552,14 +593,15 @@ a:focus-visible {
         gap: 0.35rem;
     }
 
-    .timeline-item {
+    .timeline-item,
+    .teaching-item {
         grid-template-columns: 1fr;
         gap: 0.35rem;
     }
 
     .publication-item {
-        grid-template-columns: 2.2rem minmax(0, 1fr);
-        gap: 0.6rem;
+        grid-template-columns: 1.7rem minmax(0, 1fr);
+        gap: 0.5rem;
     }
 }
 
